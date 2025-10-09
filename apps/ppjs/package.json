@@ -1,0 +1,32 @@
+{
+  "name": "ppjs",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A wrapper schortcut for C++ compiler calls.",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run build:tsc && pnpm run build:esb",
+    "build:tsc": "tsc --project tsconfig.json",
+    "build:esb": "node ./esbuild.mjs",
+    "prebuild:tsc": "rimraf --no-verbose --no-interactive ./dist/tsc",
+    "prebuild:esb": "rimraf --no-verbose --no-interactive ./dist/bundle && rimraf --no-verbose --no-interactive ./dist/bundle",
+    "dev": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "c++",
+    "javascript",
+    "typescript",
+    "node"
+  ],
+  "author": "TulioG_Projects",
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34",
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "esbuild": "0.25.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
