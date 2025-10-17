@@ -11,9 +11,11 @@
     "prebuild": "rimraf --no-verbose --no-interactive ./build",
     "dev": "node ./bin/dev",
     "dev:win": "./bin/dev.cmd",
+    "dev:serve": "pnpm build && tsc --build --watch",
     "format": "pnpm exec biome format --write",
     "lint": "pnpm exec biome lint --write",
     "biome": "pnpm exec biome check",
+    "add-command": "pnpm exec oclif generate command",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "TulioG_Projects",

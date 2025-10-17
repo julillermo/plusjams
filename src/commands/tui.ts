@@ -1,10 +1,12 @@
 import { Args, Command, Flags } from "@oclif/core";
 
-export default class Temp extends Command {
+// Ink CLI framework will go here
+export default class Tui extends Command {
 	static override args = {
 		file: Args.string({ description: "file to read" }),
 	};
-	static override description = "describe the command here";
+	static override description =
+		"> interact with plusjams via a terminal user interfance";
 	static override examples = ["<%= config.bin %> <%= command.id %>"];
 	static override flags = {
 		// flag with no value (-f, --force)
@@ -14,11 +16,11 @@ export default class Temp extends Command {
 	};
 
 	public async run(): Promise<void> {
-		const { args, flags } = await this.parse(Temp);
+		const { args, flags } = await this.parse(Tui);
 
 		const name = flags.name ?? "world";
 		this.log(
-			`hello ${name} from /home/tuliog/Documents/Workspace/plusjams/apps/ppjs/src/commands/temp.ts`,
+			`hello ${name} from /home/tuliog/Documents/Workspace/plusjams/src/commands/tui.ts`,
 		);
 		if (args.file && flags.force) {
 			this.log(`you input --force and --file: ${args.file}`);
