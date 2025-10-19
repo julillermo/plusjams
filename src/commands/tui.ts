@@ -15,6 +15,8 @@ export default class Tui extends Command {
 		name: Flags.string({ char: "n", description: "name to print" }),
 	};
 
+	static override state = "planned";
+
 	public async run(): Promise<void> {
 		const { args, flags } = await this.parse(Tui);
 

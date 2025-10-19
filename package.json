@@ -11,7 +11,7 @@
     "prebuild": "rimraf --no-verbose --no-interactive ./build",
     "dev": "node ./bin/dev",
     "dev:win": "./bin/dev.cmd",
-    "dev:serve": "pnpm build && tsc --build --watch",
+    "dev:server": "pnpm build && tsc --build --watch",
     "format": "pnpm exec biome format --write",
     "lint": "pnpm exec biome lint --write",
     "biome": "pnpm exec biome check",
