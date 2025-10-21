@@ -1,6 +1,6 @@
 {
   "name": "plusjams",
-  "version": "0.1.0-dev.2",
+  "version": "0.1.0",
   "description": "A C++ project management system orchestrated via node scripts",
   "type": "module",
   "bin": {
