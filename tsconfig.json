@@ -2,17 +2,17 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist/tsc",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "tsBuildInfoFile": "./.tsbuildinfo",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "target": "es2021",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
+    "target": "ES2024",
     // "types": ["node"],
+    // For nodejs:
+    "lib": ["esnext"],
     // and npm install -D @types/node
 
     // Other Outputs
@@ -28,18 +28,18 @@
     */
     // "moduleResolution": "bundler",
     // "noEmit": true, // set to true if you want other comilers/bunders to further handle the output
-    "emitDeclarationOnly": true, // set to true if you only want to emit types
-    "allowImportingTsExtensions": true,
+    // "emitDeclarationOnly": true, // set to true if you only want to emit types
+    // "allowImportingTsExtensions": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
 
     // Style Options
     "noImplicitReturns": true,
     // "noImplicitOverride": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 

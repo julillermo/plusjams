@@ -2,17 +2,48 @@
   "name": "plusjams",
   "version": "0.1.0",
   "description": "A C++ project management system orchestrated via node scripts",
-  "scripts": {
-    "build": "pnpm -r build",
-    "test": "pnpm -r test"
+  "type": "module",
+  "bin": {
+    "ppjs": "./bin/run.js"
   },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prebuild": "rimraf --no-verbose --no-interactive ./build",
+    "dev": "node ./bin/dev",
+    "dev:win": "./bin/dev.cmd",
+    "dev:server": "pnpm build && tsc --build --watch",
+    "format": "pnpm exec biome format --write",
+    "lint": "pnpm exec biome lint --write",
+    "biome": "pnpm exec biome check",
+    "add-command": "pnpm exec oclif generate command",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TulioG_Projects",
+  "license": "MIT",
   "keywords": [
     "c++",
     "javascript",
     "typescript",
-    "node"
+    "node",
+    "oclif"
   ],
-  "author": "TulioG_Projects",
-  "license": "MIT",
-  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
+  "oclif": {
+    "bin": "ppjs",
+    "commands": "./build/commands",
+    "dirname": "ppjs",
+    "topicSeparator": " "
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd",
+  "dependencies": {
+    "@oclif/core": "^4.5.6",
+    "execa": "^9.6.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.6",
+    "@types/node": "^24.7.0",
+    "oclif": "^4.22.32",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
 }
