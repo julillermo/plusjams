@@ -1,5 +1,5 @@
-import * as path from "node:path";
 import { execa } from "execa";
+import * as path from "node:path";
 import type { Compiler } from "../../types/compile.js";
 import { isWindows } from "../node/process.js";
 
@@ -22,11 +22,11 @@ export async function compileExeca(
 			const resolvedOutputPath = path.resolve(options.outputFilePath);
 
 			if (!isWindows()) {
-				console.log("Setting executable file permision ...");
+				console.log("Setting 755 executable file permision ...");
 				await execa("chmod", ["755", resolvedOutputPath]);
 			}
 
-			console.log(`\nRunning output ${resolvedOutputPath} ...\n`);
+			console.log(`Running output ${resolvedOutputPath} ...\n`);
 			await execa(resolvedOutputPath, undefined, {
 				stdin: ["inherit"],
 				stdout: ["inherit"],
