@@ -3,7 +3,11 @@
 > [!NOTE]  
 > _These are just broad ideas that may or may not be incorporated in the future_.
 
-## Styling / UI / UX:
+## Fixes :
+
+- [ ] Add `plusjams compile` examples
+
+## Styling / UI / UX :
 
 - [ ] <mark>Option for ink TUI to execute commands via a user interface.</mark>
 

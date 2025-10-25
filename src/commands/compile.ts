@@ -10,7 +10,7 @@ import { compileExeca } from "../utils/execa/compile.js";
 
 export default class Compile extends Command {
 	static override summary =
-		"Compile C++ source opinionated with (but cuztomizable) defaults.";
+		"Compile C++ source with opinionated  (but cuztomizable) defaults.";
 	static override description = "";
 	static override examples = [
 		'<%= config.bin %> <%= command.id %> "./cpp_source.cpp"',

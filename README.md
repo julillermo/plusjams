@@ -15,7 +15,7 @@ For documentation files, kindly refer to:
 
 ## Added features as of latest v0.1.0
 
-- [x] `plusjams compile` command as a wrapper to the host system `clang++` and `g++`.
+- [x] `plusjams compile` command as a wrapper to the host system `clang++` and `g++` compiler.
 
 ## Planned updates for v0.2.0
 
