@@ -1,8 +1,5 @@
 import { Args, Command, Flags } from "@oclif/core";
-import { render } from "ink";
-import { ExampleTextBox } from "../components/trial/TextBox.js";
 
-// Ink CLI framework will go here
 export default class Tui extends Command {
   static override summary =
     "Compile C++ source  with (but cuztomizable) defaults.";
@@ -20,7 +17,7 @@ export default class Tui extends Command {
   };
 
   public async run(): Promise<void> {
-    // 	const { args, flags } = await this.parse(Tui);
+    const { args: _args, flags: _flags } = await this.parse(Tui);
 
     // 	const name = flags.name ?? "world";
     // 	this.log(
@@ -30,7 +27,6 @@ export default class Tui extends Command {
     // 		this.log(`you input --force and --file: ${args.file}`);
     // 	}
     // }
-
-    render(<ExampleTextBox />);
+    this.log("Ink CLI framework will go here");
   }
 }

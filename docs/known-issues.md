@@ -7,4 +7,5 @@
   - **explanation**: [explanation]
 -->
 
-> [!NOTE] > _No known issues at the moment. Issues will be noted here as the project continues development_.
+> [!NOTE]  
+> _No known issues at the moment. Issues will be noted here as the project continues development_.
