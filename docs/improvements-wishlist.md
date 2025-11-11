@@ -20,6 +20,7 @@
 - [ ] <mark>Make the project available via the [npmjs.com](https://www.npmjs.com/).</mark>
 - [ ] <mark>Have a dedicated web-page to serve as an introduction and documentation guide for the project. Preferrably the use [Astro.js](https://astro.build/) or [Starlight](https://starlight.astro.build/) (by Astro) as a frontend framework, and host for free on github.</mark>
 - [ ] <mark>Test cases using Vitest.</mark>
+- [ ] <mark>Test out if [tinyexec](https://github.com/tinylibs/tinyexec) is easy enought to replace execa</mark>
 - [ ] Have a CI/CD
   - [ ] Automatically run the tests and bump the version.
   - [ ] Code signing for application distribution.

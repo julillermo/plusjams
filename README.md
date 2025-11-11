@@ -30,3 +30,4 @@ For documentation files, kindly refer to:
 ## Planned updates for v0.4.0
 
 - [ ] A development server / watcher daemon to automatically compile individual C++ source files when a change gets saved.
+- [ ] Test out if [tinyexec](https://github.com/tinylibs/tinyexec) is easy enought to replace execa
